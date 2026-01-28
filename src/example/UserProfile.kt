@@ -10,7 +10,7 @@ class UserProfile(initialName: String, initialEmail: String){
         _, old, new ->
         println("Email обновлен: '$old' -> '$new'")
     }
-    var avatar: String by lazy{
+    val avatar: String by lazy{
         println("Загружаем аватар для $name...")
         "avatar_of_$name.png"
     }
