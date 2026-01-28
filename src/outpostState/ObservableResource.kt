@@ -1,7 +1,7 @@
-package resources
+package outpostState
 import kotlin.properties.Delegates
 
-data class OutpostResource(
+data class ObservableResource(
     val id: Int,
     val name: String,
     var amountInit: Int
@@ -10,8 +10,8 @@ data class OutpostResource(
         println("Ресурс [$name] изменился: $old -> $new")
     }
     fun main(){
-        val gas = OutpostResource(1,"Gas",100)
-        val mineral = OutpostResource(2,"Miterals",250)
+        val gas = ObservableResource(1,"Gas",100)
+        val mineral = ObservableResource(2,"Miterals",250)
         println("Успех! Вы добыли дополнительные кол-во минералов: ${mineral.amount + 50}")
         val bonusMineral = mineral.copy(id = 3, name = "Minerals Bonus", amountInit = mineral.amount + 50)
         println(gas.toString())
