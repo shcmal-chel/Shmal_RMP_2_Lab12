@@ -15,7 +15,7 @@ class GameHero(startName: String){
         "Метериотный дождь"
     }
 }
-class UserProfile(initialName: String, initialEmail: String){}
+//class UserProfile(initialName: String, initialEmail: String){}
 
 fun main(){
     println("Создаем героя...")
